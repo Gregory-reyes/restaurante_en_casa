@@ -1,0 +1,27 @@
+{
+  "name": "restaurante_en_casa",
+  "version": "1.0.0",
+  "description": "restaurante",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gregory-reyes/restaurante_en_casa.git"
+  },
+  "author": "Gregory Reyes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gregory-reyes/restaurante_en_casa/issues"
+  },
+  "homepage": "https://github.com/Gregory-reyes/restaurante_en_casa#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.7.0",
+    "lite-server": "^2.6.1",
+    "run": "^1.4.0"
+  }
+}
