@@ -1,4 +1,4 @@
-# restaurante_en_casa
+## restaurante_en_casa
 Instalación inicial del proyecto y dependencias
 ```
 documentación bootstrap 5.2.3
@@ -10,7 +10,7 @@ npm install bootstrap@5.2.3
 npm install lite-server --save-dev
 npm install jquery
 ``` 
-## comprobar la instalación correcta de lite-server
+# comprobar la instalación correcta de lite-server
 ```
 npm start
 ```
