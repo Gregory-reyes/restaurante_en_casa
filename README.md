@@ -13,4 +13,13 @@ npm install lite-server --save-dev
 ```
 npm start
 ```
+# crear carpeta css y llamar la ruta en el index.html
+```
+<link rel="stylesheet" href="css/estilos.css">
+```
+# crear about.html y llamar la ruta en el index.html
+```
+creamos el about.html se aplica Hiding elements para ocultar elementos grandes en dispositivos pequeños.
+```
+
 
