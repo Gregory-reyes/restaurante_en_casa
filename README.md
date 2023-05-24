@@ -21,5 +21,15 @@ npm start
 ```
 creamos el about.html se aplica Hiding elements para ocultar elementos grandes en dispositivos pequeños.
 ```
-
+# se implementa Iconos de bootstrap llamando el cdn de la versión 5.2.3
+```
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+solo es agregarle los cdn de las imagenes donde se va a colocar y listo.
+```
+# se utilizaron iconos de icons8.com
+```
+se utilizaron cdn sin necesidad de descargarlos
+```
+# se crea contacto.html y se llama la ruta en el index.html
+```
 
