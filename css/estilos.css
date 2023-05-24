@@ -28,7 +28,17 @@
 
 address{    
     margin: 0%;
+    font-size: 17px;
     color: #0f0f0f;
 }
 
-/*ESTILOS ABOUT*/
+/*nav de navegación*/
+body{
+    padding: 50px 0px 0px 0px;
+    z-index: 0;
+}
+
+.navbar-dark{
+    background-color: #512da8;
+
+}
