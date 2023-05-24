@@ -13,6 +13,28 @@
       <title>Restaurante Marleny</title>
   </head>
   <body>
+      <!--Barra de navegacion de bootstrap-->
+      <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top"> <!--fixed-top fijar el nav bg-primary= color-->
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Restaurante Marleny</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <!--data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" permite que el boton se despliegue y los valores quene en un cuadro-->
+            <span class="navbar-toggler-icon"></span> <!--navbar-toggler-icon icono del boton-->
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!--collapse navbar-collapse permite que el boton se despliegue y los valores queden en un cuadro-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Inicio</a></li><!--nav-link active permite que no quede sombreado-->
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="./aboutus.html">Acerca de nosotros</a></li>
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="#">Menu</a></li>
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="#">Contáctanos</a></li>                   
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!--Header-->
       <header class="header p-5">
         <div class="container-fluid py-7">
           <div class="row row-header">
@@ -67,7 +89,7 @@
               <h5>links</h5>
               <ul class="list-unstyled">
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Acerca de nosotros</a></li>
+                <li><a href="./aboutus.html">Acerca de nosotros</a></li>
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">Contactame</a></li>
               </ul>
