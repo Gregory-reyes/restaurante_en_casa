@@ -20,6 +20,7 @@
       <!--Barra de navegacion de bootstrap-->
       <nav class="navbar navbar-dark navbar-expand-sm fixed-top"> <!--fixed-top fijar el nav bg-primary= color-->
         <div class="container-fluid">
+          <img src="./images/icons8-chef-256.png" height="40" width="40" class="img-fluid" alt="...">
           <a class="navbar-brand" href="./index.html">Restaurante Marleny</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <!--data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" permite que el boton se despliegue y los valores quene en un cuadro-->
             <span class="navbar-toggler-icon"></span> <!--navbar-toggler-icon icono del boton-->
@@ -47,7 +48,9 @@
                       <p>Nos inspiramos en las mejores cocinas del mundo para crear una experiencia de fusión única. 
                         Nuestras deliciosas creaciones deleitarán sus sentidos culinarios.</p>
                   </div>
-                  <div class="col-12 col-sm">
+                  <!--Response images bootstrap para el logo-->
+                  <div class="col-12 col-sm align-self-center">
+                    <img src="./images/icons8-chef-256.png" height="110" width="120" class="img-fluid" alt="...">
                   </div>
               </div>
           </div>
@@ -67,43 +70,167 @@
               </div>
 
               <div class="row row-content align-items-center"><!--row-content clase llamada en css, align-items-center para centrar el contenido de row -->
-                  <div class="col-6">
+                  <div class="col-sm-6">
                     <h2>Nuestra historia</h2>
                     <p>Fundado en 2007, el Restaurante Marleny se estableció rápidamente como icono culinario por excelencia. 
                       Con su marca única de cocina de fusión mundial que no se puede encontrar en ningún otro lugar,
                       goza del patrocinio de la clientela.  Con una de la mejor chef con cuatro estrellas Michelin del mundo,
                         nunca se sabe lo que llegará a su plato la próxima vez que nos visite.</p>
-                    <p>El restaurante remonta sus humildes comienzos a <em>La olla de sancochos y del sartén</em>, 
+                    <p>El restaurante remonta sus humildes comienzos a xLa olla de sancochos y del sartén</em>, 
                       para posicionarse en una exitosa cadena de platos muy conocidos en la región, su popularidad siguio creciendo, 
                       que presentó por primera vez las mejores cocinas del mundo enfocadas en las comidas representativas de sudamerica.</p>
                   </div>                
-                  <div>
-                  </div>
-              </div> 
-              <div class="row row-content align-items-center">
-                  <div>
+                  <div class="col-sm text-center">
+                    <div class="card-header" style="width: 20rem;">
+                      <img src="./images/icons8-kitchen-256.png" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Ir al menu</a>
+                      </div>
+                    </div>
+                  </div>                  
+              </div>
+            <div class="container col-8">
+              <div class="card  text-center">
+                <div class="card-header">
+                  <h5>Destacados</h5>  
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Número 1 del raking Mundial</h5>
+                  <p class="card-text">Seleccionada como una de las mejores chef del mundo.</p>
+                  <a href="#ranking" class="btn btn-primary">Ver el listado</a>
+                </div>
+                <div class="card-footer text-muted">
+                  Dale click para ir al listado
+                </div>
+              </div>
+            </div> 
+              <!--Implementacion accordion bootstrap-->
+            <div class="row row-content align-items-center">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       <h2>Liderazgo empresarial</h2>
-                      <h3>Restaurante Marleny <em>Como única chef</em></h3>
-                      <!--Ocultar elementos mas largo en dispositivos pequeños d-none d-sm-block -->
-                      <p class="d-none d-sm-block">Restaurante Marleny, le da crédito a su infancia en el campo trabajó mucho y emprendió 
-                        el arduo viaje al interior del País con la intención de darles a sus hijos el mejor futuro. La magia de su sasón es el 
-                        reflejo  de su cocina preparando los platos más sabrosos con lo que esté disponible a bajo precio en el supermercado,
-                        fue su primera inspiración para crear las cocinas de fusión para las que <em>La sartén</em> se hiciera muy conocida. Aportando su entusiasmo por las cocinas de fusión a este restaurante, siendo pionero en las conexiones culinarias interculturales.</p>
-                      <h3>Inicios<em> cocinando en casas de familias</em></h3>
-                      <p class="d-none d-sm-block">Inicialmente, empezo a dar susu primero pasos en la cocina en casas de servicios, 
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>Restaurante Marleny <em>Como única chef.</em></strong>
+                        <!--Ocultar elementos mas largo en dispositivos pequeños d-none d-sm-block --> 
+                        <p class="d-none d-sm-block">
+                          Restaurante Marleny, le da crédito a su infancia en el campo trabajó mucho y emprendió 
+                          el arduo viaje al interior del País con la intención de darles a sus hijos el mejor futuro. La magia de su sasón es el 
+                          reflejo  de su cocina preparando los platos más sabrosos con lo que esté disponible a bajo precio en el supermercado,
+                          fue su primera inspiración para crear las cocinas de fusión para las que <em>La sartén</em> se hiciera muy conocida. Aportando su entusiasmo por las cocinas de fusión a este restaurante, siendo pionero en las conexiones culinarias interculturales.
+                        </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <h3>Sus Inicios</h3>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>Cocinando en<em> casas de familias</em>.</strong>
+                        <!--Ocultar elementos mas largo en dispositivos pequeños d-none d-sm-block --> 
+                        <p class="d-none d-sm-block">
+                        Inicialmente, empezo a dar susu primero pasos en la cocina en casas de servicios, 
                         cocinando para grandes sitios enfocados en la agricultura y la producción. Sus experiencias al crecer en una granja
-                        en el interior de Santander le dieron un gran aprecio por las variedades de fuentes de alimentos. Como lo expresa con sus propias palabras, <em>¡Hay que moverse para avanzar en la vida!</em></p>
-                      <h3>Salir de la zona de confort<em> Viaje a Venezuela</em></h3>
-                      <p class="d-none d-sm-block">Colocando sus esperanzas en el Todopoderoso emprendió su ida a Venezuela en su época de la bonanza
-                        petrolera, Bendecida con el sentido gustativo más exigente, se aseguró de adquirir nuevas sazones del pueblo Venezolano personalmente de que cada plato que aprendía lo combinaba con fusiones tradicionales de los países para buscar agradar a gustos exigentes.</p>
-                      <h3>Restaurante en Casa<em> Idea principal</em></h3>
-                      <p class="d-none d-sm-block">Después de su pasó por tierras lejanas adquiriendo todo ese conocimiento, volvió a su tierra para
+                        en el interior de Santander le dieron un gran aprecio por las variedades de fuentes de alimentos. Como lo expresa con sus propias palabras, <em>¡Hay que moverse para avanzar en la vida!</em>
+                        </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <h3>Salir de la zona de confort</h3>
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>Viajando a<em> Venezuela</em></strong> 
+                      <p class="d-none d-sm-block">
+                        Colocando sus esperanzas en el Todopoderoso emprendió su ida a Venezuela en su época de la bonanza
+                        petrolera, Bendecida con el sentido gustativo más exigente, se aseguró de adquirir nuevas sazones del pueblo Venezolano personalmente de que cada plato que aprendía lo combinaba con fusiones tradicionales de los países para buscar agradar a gustos exigentes.
+                      </p>                      
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      <h3>Restaurante en Casa</h3>
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong><em> Idea principal</em></strong> 
+                      <p class="d-none d-sm-block">
+                        Después de su pasó por tierras lejanas adquiriendo todo ese conocimiento, volvió a su tierra para
                         implementar todo su conocimiento para dar a conocer esas ricas fusiones de platos de diferentes culturas. 
                         Transmitir esas valiosas experiencias  desde su casa y así empezó su carrera ascendente hacia los estándares más 
                         exigentes y poder llegar hacer lo que es ahora la chef más galardonada por su magia de sabores en la cocina.
-                        <em>¡Junta las cocinas de las dos culturas más conocidas y obtendrás un éxito ganador!</em></p>
+                        <em>¡Junta las cocinas de las dos culturas más conocidas y obtendrás un éxito ganador!</em>
+                      </p>
+                    </div>
                   </div>
+                </div>
               </div>
+            </div>              
+              <!--Table bootstrap-->
+              <div class="row row-content align-items-center">
+                <div class="col-10">
+                  <h2 id="ranking">Ranking Mundial</h2>
+                  <table class="table table-hover table-striped table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Restaurante</th>
+                        <th scope="col">Nacionalidad</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="table-warning">
+                        <th scope="row">1</th>
+                        <td>Marlene Pico Castillo</td>
+                        <td>Restaurante Marleny</td>
+                        <td>Colombiana <img width="30" height="30" src="https://img.icons8.com/color/50/gold-medal--v1.png" alt="gold-medal--v1"/></td>
+                      </tr>
+                      <tr class="table-secondary">
+                        <th scope="row">2</th>
+                        <td>Alain Ducasse</td>
+                        <td>Plaza Athénée</td>
+                        <td>Frances <img width="30" height="30" src="https://img.icons8.com/color/30/olympic-medal-silver.png" alt="olympic-medal-silver"/></td>
+                      </tr>
+                      <tr class="table-danger"  >
+                        <th scope="row">3</th>
+                        <td>Pierre Gagnaire</td>
+                        <td>Restaurant Sketch</td>
+                        <td>Frances <img width="30" height="30" src="https://img.icons8.com/color/30/olympic-medal-bronze.png" alt="olympic-medal-bronze"/></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>Martín Berasategui Olazábal</td>
+                        <td>Lasarte-Oria</td>
+                        <td>Español</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>Milán Enrico Bartolini</td>
+                        <td>restaurant Schloss Schauenstein</td>
+                        <td>Italiano</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>            
         </div>
       </section>
       <!--footer-->
