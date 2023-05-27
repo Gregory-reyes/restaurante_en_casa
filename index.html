@@ -18,6 +18,7 @@
       <!--Barra de navegacion de bootstrap-->
       <nav class="navbar navbar-dark navbar-expand-sm fixed-top"> <!--fixed-top fijar el nav bg-primary= color-->
         <div class="container-fluid">
+          <img src="./images/icons8-chef-256.png" height="40" width="40" class="img-fluid" alt="...">
           <a class="navbar-brand" href="#">Restaurante Marleny</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <!--data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" permite que el boton se despliegue y los valores quene en un cuadro-->
             <span class="navbar-toggler-icon"></span> <!--navbar-toggler-icon icono del boton-->
@@ -44,9 +45,14 @@
               <h1>Restaurante Marleny</h1>
               <p>Nos inspiramos en las mejores cocinas del mundo para crear una experiencia de fusión única. Nuestras deliciosas creaciones deleitarán sus sentidos culinarios.</p>
             </div>
-            <div class="col-12 col-sm">
-
+            <!--Response images bootstrap para el logo-->
+            <div class="col-12 col-sm-2 align-self-center">
+              <img src="./images/icons8-chef-256.png" height="110" width="120" class="img-fluid" alt="...">
             </div>
+            <div class="col-12 col-sm-4 align-self-center">
+              <a href="#reserva"><button type="button" class="btn btn-warning">Reservar Mesa</button></a>
+            </div>
+            
           </div>
         </div>
       </header>
@@ -58,17 +64,34 @@
               <h3>Nuestras deliciosas creaciones culinarias</h3>
             </div>          
             <div class="col col-sm order-sm-first col-md">
-              <h2>Pizza</h2>
-              <p>Una combinación única de la pizza italiana, cubierta con aceitunas Cerignola, tomates cherry maduros en rama, cebolla Vidalia, guindillas Guntur y Buffalo Paneer.</p>
+              <!--implementacion Media object bootstrap-->
+              <div class="d-flex">
+                <div class="flex-shrink-0 img-thumbnail"> <!--img-thumbnail para que la imagen tenga bordes redondeados-->
+                  <img src="./images/uthappizza.png" alt="PizzaMarleny">
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <!--implementacion badge bootstrap-->
+                  <h2>Pizza Familiar <span class="badge text-bg-danger">Hot</span> <span class="badge rounded-pill text-bg-secondary">$59.000</span></h2>
+                  <p class="d-none d-sm-block">Una combinación única de la pizza italiana, cubierta con aceitunas Cerignola, tomates cherry maduros en rama, cebolla Vidalia, guindillas Guntur y Buffalo Paneer.</p>
+                </div>
+              </div>
+              
             </div>
           </div>
           <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 order-sm-last col-md-3">
+            <div class="col-12 col-sm-4 order-sm-first col-md-3">
               <h3>Promociones de este mes</h3>
             </div>
-            <div class="col col-sm order-sm-first col-md">
-              <h2>Fin de semana Gran Buffet</h2>
-              <p>Combinaciones apetitosas con cinco ensaladas diferentes, seis tentadores aperitivos, seis platos principales y cinco postres. Burbujas y jugo natural gratis. Todo por sólo $29.000 por persona.</p>
+            <div class="col col-sm order-sm-last col-md">
+              <div class="d-flex">                
+                <div class="flex-grow-1 ms-3">
+                  <h2>Fin de semana Gran Buffet <span class="badge text-bg-danger">Promoción</span></h2>
+                  <p class="d-none d-sm-block">Combinaciones apetitosas con cinco ensaladas diferentes, seis tentadores aperitivos, seis platos principales y cinco postres. Burbujas y jugo natural gratis. Todo por sólo $29.000 por persona.</p>
+                </div>
+                <div class="flex-shrink-0 img-thumbnail">
+                  <img src="./images/buffet.png" height="160" width="150" alt="...">
+                </div>
+              </div>
             </div>
           </div>
           <div class="row row-content align-items-center">
@@ -76,12 +99,106 @@
               <h2>Chef de platos de preparación tradicionales</h2>
             </div>
             <div class="col col-sm order-sm-first col-md">
-              <h2>Marlene Pico</h2>
-              <h4>Chef profesional</h4>
-              <p>Galardonada con cuatro estrellas Michelin y una amplia experiencia internacional, ha trabajado en estrecha colaboración con la élite del mundo culinario y está especializada en la creación de deliciosas experiencias de fusión indo-italiana.</p>
+              <div class="d-flex">
+                <div class="flex-shrink-0">
+                  <img src="./images/icons8-chef-256.png" height="160" width="150" alt="...">
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h2>Marlene Pico</h2>
+                  <h4>Chef profesional</h4>
+                  <p class="d-none d-sm-block">Galardonada con cuatro estrellas Michelin y una amplia experiencia internacional, ha trabajado en estrecha colaboración con la élite del mundo culinario y está especializada en la creación de deliciosas experiencias de fusión indo-italiana.</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+          <!--Formuario para reserva de mesa-->
+          <div id="reserva" class="container col-8">            
+            <div class="form-table row-content align-items-center"> 
+              <table class="table col-8">
+                <thead>                
+                  <tr class="table-warning"><th scope="col">Reserva de Mesa</th></tr>
+                </thead>
+              </table>             
+              <form class="row">                
+                <div class="form-check-inline">                  
+                  <label class="col-4 text-center"><p class="d-none d-sm-block">N° Acompañantes:</p> </label>                 
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                    <label class="form-check-label" for="inlineRadio5">5</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                    <label class="form-check-label" for="inlineRadio6">6</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="option7">
+                    <label class="form-check-label" for="inlineRadio7">7</label>
+                  </div>
+                </div>             
+                <div class="col-4 text-center">
+                  <label> La Fecha y Hora: </label>                    
+                </div>
+                <div class="col-md-3">
+                  <label for="validationDefault01" class="form-label">Fecha</label>
+                  <input type="text" class="form-control" id="validationDefault01" placeholder="D/M/A" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationDefault02" class="form-label">Hora</label>
+                  <select class="form-select" aria-label="select example">
+                    <option selected disabled>Seleccione Hora</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option> 
+                    <option value="3">3</option>
+                    <option value="4">4</option> 
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>                  
+                  </select>
+                </div>  
+                <div class="col-md-2">
+                  <label for="validationDefault02" class="form-label">Opción</label>
+                  <select class="form-select" aria-label="select example">
+                    <option selected disabled>a.m / p.m</option>
+                    <option value="1">a.m</option>
+                    <option value="2">p.m</option>                    
+                  </select>
+                </div>               
+                
+                <div class="col-8">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label" for="invalidCheck2">
+                      acepto los términos y condiciones 
+                    </label>
+                  </div>
+                </div>
+                <div class="col-6 ">
+                  <button type="submit" class="btn btn-primary">Reservar <i class="bi bi-send"></i></button>
+                </div>
+              </form>
+            </div>
+          </div>
       </section>
       <!--footer-->
       <footer class="footer">
