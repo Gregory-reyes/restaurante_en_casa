@@ -30,6 +30,9 @@ solo es agregarle los cdn de las imagenes donde se va a colocar y listo.
 ```
 se utilizaron cdn sin necesidad de descargarlos
 ```
-# se crea contacto.html y se llama la ruta en el index.html
+# se crea contacto.html y se llama la ruta en el index.html y en about.html
 ```
+se implementaron en el href del nav de cada una de los index creados
+```
+
 
