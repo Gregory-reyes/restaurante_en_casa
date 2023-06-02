@@ -42,3 +42,27 @@ body{
     background-color: #512da8;
 
 }
+
+/* estilode del carousel*/
+.carousel{
+    background: #512da8;
+    
+}
+
+.carousel-item{
+    height: 280px;
+    font-size: 20px;
+}
+
+.carousel-item img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+    min-width: 300px;
+    background-color: rgb(250, 245, 235);
+}
+
+.carousel-caption{
+    color: floralwhite;
+}

@@ -32,7 +32,7 @@
             </ul>
             <!--Boton para iniciar sesion-->
             <span class="navbar-text">            
-              <a data-bs-toggle="modal" data-bs-target="#loginModal" class="btn btn-outline-success" href="#"><i class="bi bi-box-arrow-in-right"></i> Login</a> <!--data-bs-target="#loginModal" es nuestro id para llamar el modal; class="btn btn-outline-success" es para dar color verde y recuadro verde al login -->           
+              <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" class="btn btn-outline-success" title="Click para iniciar sesión"><i class="bi bi-box-arrow-in-right"></i> Iniciar Sesión</a> <!--data-bs-target="#loginModal" es nuestro id para llamar el modal; class="btn btn-outline-success" es para dar color verde y recuadro verde al login -->           
             </span>
           </div>          
         </div>
@@ -49,10 +49,10 @@
               <div class="container-fluid"> <!--container-fluid para que el contenido del modal se ajuste-->
                 <div class="row">
                   <div class="col">
-                    <label class="sr-only" for="example">Usuario:</label>
+                    <label class="sr-only" for="usuario">Usuario:</label>
                   </div>
                   <div class="col">
-                    <input type="input" class="form-control form-control-sm mr-1" id="example" placeholder="Ingrese Usuario">
+                    <input type="input" class="form-control form-control-sm mr-1" id="usuario" placeholder="Ingrese Usuario">
                   </div>                  
                 </div>
                 <div class="row">
@@ -66,20 +66,19 @@
                 <div class="col-sm-auto">
                   <div class="form-check">
                       <input class="form-check-input" type="checkbox">
-                      <label class="form-check-label"> Remember me
+                      <label class="form-check-label"> Recuerdeme
                       </label>
                   </div>
                 </div>
               </div>              
             </div>            
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Guardar</button>
             </div>
           </div>
         </div>
-      </div>
-      
+      </div>      
       <!--Header-->
       <header class="header p-5">
         <div class="container-fluid py-7">
@@ -88,23 +87,65 @@
               <div class="col">
                 <h1>Restaurante Marleny</h1>
               <p>Nos inspiramos en las mejores cocinas del mundo para crear una experiencia de fusión única. Nuestras deliciosas creaciones deleitarán sus sentidos culinarios.</p>
-              </div>
-              
+              </div>              
             </div>
             <!--Response images bootstrap para el logo-->
             <div class="col-12 col-sm-3 align-self-center">
               <img src="./images/icons8-chef-256.png" height="110" width="120" class="img-fluid" alt="...">
             </div>
+            <!--data-bs-toggle="mensaje" para mensaje corto en el boton mas el mensaje title=-->
             <div class="col-12 col-sm-3 align-self-center">
-              <a href="#reserva" data-bs-toggle="mensaje" title="Dale click para reservar mesa"><button type="button" class="btn btn-warning">Reservar Mesa</button></a>
-            </div>
-            
+              <a href="#reserva" data-bs-toggle="mensaje" title="Click para reservar mesa"><button type="button" class="btn btn-warning">Reservar Mesa</button></a>
+            </div>            
           </div>
         </div>
       </header>
       <!--Seccion Comida-->
       <section>
+        <br><br>
+        <!--Implementacion Carousel bootstrap-->
         <div class="container">
+          <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="./images/uthappizza.png" class="d-block img-fluid" alt="..."> <!--class="d-block img-fluid" ajuste al carrusel a la imagen fluida-->
+                <div class="carousel-caption d-none d-md-block">
+                  <h2 class="text-white">Pizza Familiar <span class="badge text-bg-danger">Hot</span> <span class="badge rounded-pill text-bg-secondary">$59.000</span></h2>
+                  <p class="d-none d-sm-block text-white">Una combinación única de la pizza italiana, cubierta con aceitunas Cerignola, tomates cherry maduros en rama, cebolla Vidalia, guindillas Guntur y Buffalo Paneer.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="./images/buffet.png" class="d-block img-fluid" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h2 class="text-white">Fin de semana Gran Buffet <span class="badge text-bg-danger">Promoción</span></h2>
+                  <p class="d-none d-sm-block text-white">Combinaciones apetitosas con cinco ensaladas diferentes, seis tentadores aperitivos, seis platos principales y cinco postres. Burbujas y jugo natural gratis. Todo por sólo $29.000 por persona.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./images/sancocho.png" width="110" height="110" class="d-block img-fluid" alt="..."> <!--width="110" height="110" ajuste manual de la imagen-->
+                <div class="carousel-caption d-none d-md-block">
+                  <h2 class="text-white">Marlene Pico <span class="badge text-bg-danger">Chef profesional</span></h2>
+                  <p class="d-none d-sm-block text-white">Amplia experiencia internacional, trabajando en estrecha colaboración con la élite del mundo culinario y está especializada en la creación de deliciosas experiencias de fusión indo-italiana.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>  
+        </div>
+        
+        <div class="container">   
           <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
               <h3>Nuestras deliciosas creaciones culinarias</h3>
@@ -120,8 +161,7 @@
                   <h2>Pizza Familiar <span class="badge text-bg-danger">Hot</span> <span class="badge rounded-pill text-bg-secondary">$59.000</span></h2>
                   <p class="d-none d-sm-block">Una combinación única de la pizza italiana, cubierta con aceitunas Cerignola, tomates cherry maduros en rama, cebolla Vidalia, guindillas Guntur y Buffalo Paneer.</p>
                 </div>
-              </div>
-              
+              </div>              
             </div>
           </div>
           <div class="row row-content align-items-center">
