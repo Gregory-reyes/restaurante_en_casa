@@ -16,7 +16,7 @@
     margin: 0% auto;
     padding: 50px 0px 50px 0px;
     border-bottom: 1px solid #E0E0E0;
-    min-height: 400px;
+    min-height: 350px;
 }
 
 /*footer*/
@@ -65,4 +65,20 @@ body{
 
 .carousel-caption{
     color: floralwhite;
+}
+
+#carouselButton {
+    position: absolute;
+    bottom: 250px;/*si el coloco '0' lo posiciona en la parte inferior del carousel y si le colo 250 el laparte superior del tamaño del carousel*/
+    right: 0px;
+}
+
+#reservarBoton{    
+    --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
+}
+
+.texto-footer{
+    padding: 35px 0px 0px 0px;
+    color: #626060;
+    font-size: 15px;
 }
