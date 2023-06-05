@@ -15,7 +15,7 @@
       <title>Restaurante Marleny</title>
   </head>
   <body>
-      <!--Barra de navegacion de bootstrap-->
+      <!--Barra de navegacion nav de bootstrap-->
       <nav class="navbar navbar-dark navbar-expand-sm fixed-top"> <!--fixed-top fijar el nav bg-primary= color-->
         <div class="container-fluid">
           <img src="./images/icons8-chef-256.png" height="40" width="40" class="img-fluid" alt="...">
@@ -30,139 +30,221 @@
               <li class="nav-item"><a class="nav-link" aria-current="page" href="#"><i class="bi bi-menu-button-fill"></i> Menu</a></li>
               <li class="nav-item"><a class="nav-link" aria-current="page" href="./contactus.html"><i class="bi bi-person-fill-add"></i> Contáctanos</a></li>                   
             </ul>
-            <!--Boton para iniciar sesion-->
-            <span class="navbar-text">            
-              <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" class="btn btn-outline-success" title="Click para iniciar sesión"><i class="bi bi-box-arrow-in-right"></i> Iniciar Sesión</a> <!--data-bs-target="#loginModal" es nuestro id para llamar el modal; class="btn btn-outline-success" es para dar color verde y recuadro verde al login -->           
-            </span>
+            <!--Botones para iniciar sesion y registro-->
+            <div>
+              <span class="navbar-text">            
+                <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" class="btn btn-outline-success" title="Click para iniciar sesión"><i class="bi bi-box-arrow-in-right"></i> Iniciar Sesión</a> <!--data-bs-target="#loginModal" es nuestro id para llamar el modal; class="btn btn-outline-success" es para dar color verde y recuadro verde al login -->           
+              </span>
+              <span class="navbar-text">            
+                <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" class="btn btn-outline-primary" title="Click registrarse"><i class="bi bi-person-vcard"></i> Registrarse</a> <!--data-bs-target="#loginModal" es nuestro id para llamar el modal; class="btn btn-outline-success" es para dar color verde y recuadro verde al login -->           
+              </span>
+            </div>            
           </div>          
         </div>
       </nav>
-      <!--Modal para iniciar sesion-->
-      <div class="modal fade" id="loginModal" tabindex="-1"> <!--modal fade para que el modal se despliegue  suave en la pagina y llamamos el id=-->
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Ingrese su usuario y contraseña</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <div class="container-fluid"> <!--container-fluid para que el contenido del modal se ajuste-->
-                <div class="row">
+
+      <!--seccion modales pagina-->
+      <section>
+        <!--Modal para iniciar sesion-->
+        <div class="modal fade" id="loginModal" tabindex="-1"> <!--modal fade para que el modal se despliegue  suave en la pagina y llamamos el id=-->
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header bg-success text-white">
+                <h5 class="modal-title">Ingrese Usuario y Contraseña</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid"> <!--container-fluid para que el contenido del modal se ajuste-->
+                  <div class="row">
+                    <div class="col-3 offset-1">
+                      <label class="sr-only" for="usuario"><p>Usuario:</p></label>
+                    </div>
+                    <div class="col-7">
+                      <input type="input" class="form-control form-control-sm mr-1" id="usuario" placeholder="Ingrese Usuario" required>
+                    </div>                  
+                  </div>
+                  <div class="row">
+                    <div class="col-3 offset-1">
+                      <label class="sr-only" for="exampleInputPassword3"><p> Contraseña:</p></label>
+                    </div>
+                    <div class="col-7">
+                      <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Contraseña" required>
+                    </div>                  
+                  </div>
                   <div class="col-3 offset-1">
-                    <label class="sr-only" for="usuario"><p>Usuario:</p></label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label"> Recuerdeme
+                        </label>
+                    </div>
                   </div>
-                  <div class="col-7">
-                    <input type="input" class="form-control form-control-sm mr-1" id="usuario" placeholder="Ingrese Usuario">
-                  </div>                  
-                </div>
-                <div class="row">
-                  <div class="col-3 offset-1">
-                    <label class="sr-only" for="exampleInputPassword3"><p>Contraseña:</p></label>
-                  </div>
-                  <div class="col-7">
-                    <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Contraseña">
-                  </div>                  
-                </div>
-                <div class="col-3 offset-1">
-                  <div class="form-check">
-                      <input class="form-check-input" type="checkbox">
-                      <label class="form-check-label"> Recuerdeme
-                      </label>
-                  </div>
-                </div>
-              </div>              
-            </div>            
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-              <button type="button" class="btn btn-success">Guardar</button>
+                </div>              
+              </div>            
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-success">Guardar</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!--Modal para reservar mesa-->
-      <div class="modal" id="reservarModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header bg-warning text-white">
-              <h5 class="modal-title">Reservar Mesa</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!--Modal para Registrarse-->
+        <div class="modal fade" id="registerModal" tabindex="-1"> <!--modal fade para que el modal se despliegue  suave en la pagina y llamamos el id=-->
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Formulario registro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid"> <!--container-fluid para que el contenido del modal se ajuste-->
+                  <div class="row">
+                    <div class="col-3 offset-1">
+                      <label class="sr-only" for="nombres"><p>Nombres:</p></label>
+                    </div>
+                    <div class="col-7">
+                      <input type="text" class="form-control form-control-sm mr-1" id="nombresR" placeholder="Ingrese nombres" required>
+                    </div>                  
+                  </div>
+                  <div class="row">
+                    <div class="col-3 offset-1">
+                      <label class="sr-only" for="apellidos"><p>Apellidos:</p></label>
+                    </div>
+                    <div class="col-7">
+                      <input type="text" class="form-control form-control-sm mr-1" id="apellidosR" placeholder="Ingrese apellidos" required>
+                    </div>                  
+                  </div>
+                  <div class="row">
+                    <div class="col-3 offset-1">
+                      <label class="sr-only" for="celular"><p>Celular:</p></label>
+                    </div>
+                    <div class="col-7">
+                      <input type="text" class="form-control form-control-sm mr-1" id="celular" placeholder="N° de Celular" required>
+                    </div>                  
+                  </div>
+                  <div class="row">
+                    <div class="col-3 offset-1">
+                      <label class="sr-only" for="correo"><p>Correo:</p></label>
+                    </div>
+                    <div class="col-7">
+                      <input type="email" class="form-control form-control-sm mr-1" id="correo" placeholder="Correo Electrónico" required>
+                    </div>                  
+                  </div>
+                  <div class="row">
+                    <div class="col-3 offset-1">
+                      <label class="sr-only" for="contraseña1"><p>Contraseña:</p></label>
+                    </div>
+                    <div class="col-7">
+                      <input type="password" class="form-control form-control-sm mr-1" id="contraseña1" placeholder="Contraseña" required>
+                    </div>                  
+                  </div>
+                  <div class="row">
+                    <div class="col-3 offset-1">
+                      <label class="sr-only" for="contraseña2"><p>Confirmar contraseña:</p></label>
+                    </div>
+                    <div class="col-7">
+                      <input type="password" class="form-control form-control-sm mr-1" id="contraseña2" placeholder="Confirmar Contraseña" required>
+                    </div>                  
+                  </div>                
+                </div>              
+              </div>            
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Registrarme</button>
+              </div>
             </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-3 offset-1">
-                  <label class="col text-center"><p>N° Acompañantes:</p></label>
-                </div>
-                <div class="col">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1">1</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">2</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                    <label class="form-check-label" for="inlineRadio3">3</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-                    <label class="form-check-label" for="inlineRadio4">4</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
-                    <label class="form-check-label" for="inlineRadio5">5</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
-                    <label class="form-check-label" for="inlineRadio6">6</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="option7">
-                    <label class="form-check-label" for="inlineRadio7">7</label>
-                  </div>
-                </div>
+          </div>
+        </div>
+        <!--Modal para reservar mesa-->
+        <div class="modal" id="reservarModal" tabindex="-1">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header bg-warning text-white">
+                <h5 class="modal-title">Reservar Mesa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="row">
-                <div class="col-3 offset-1">
-                  <label class="col text-center"><p>Tipo del menu:</p> </label>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-3 offset-1">
+                    <label class="col text-center"><p>N° Comensales:</p></label>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                      <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                      <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                      <label class="form-check-label" for="inlineRadio3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                      <label class="form-check-label" for="inlineRadio4">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                      <label class="form-check-label" for="inlineRadio5">5</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                      <label class="form-check-label" for="inlineRadio6">6</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="option7">
+                      <label class="form-check-label" for="inlineRadio7">7</label>
+                    </div>
+                  </div>
                 </div>
-                <div class="col">
-                  <label class="btn btn-secondary">
-                    <input type="radio" name="options" id="am"> Continental
-                 </label>
-                  <label class="btn btn-primary">
-                    <input type="radio" name="options" id="pm"> Esp. del chef
+                <div class="row">
+                  <div class="col-3 offset-1">
+                    <label class="col text-center"><p>Tipo del menu:</p> </label>
+                  </div>
+                  <div class="col">
+                    <label class="btn btn-secondary">
+                      <input type="radio" name="options" id="continental"> Continental
                   </label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-3 offset-1">
-                  <p>Fecha y Hora:</p>
-                </div>
-                <div class="col-3">
-                  <label for="validationDefault01" class="form-label"><input type="date" class="form-control" id="validationDefault01" required></label>                  
-                </div>
-                <div class="col-3">                  
-                  <label for="validationDefault02" class="form-label"><input type="time" class="form-control" id="validationDefault02" required></label>                 
-                </div>
-              </div>
-                <div class="col-3 offset-1">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-                    <label class="form-check-label" for="invalidCheck2">
-                      acepto los términos y condiciones 
+                    <label class="btn btn-primary">
+                      <input type="radio" name="options" id="especialidad"> Esp. del chef
                     </label>
                   </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-success">Reservar Mesa</button>
+                <div class="row">
+                  <div class="col-3 offset-1">
+                    <p>Fecha:</p>
+                  </div>
+                  <div class="col-3">
+                    <label for="validationDefault01" class="form-label"><input type="date" class="form-control" id="validationDefault01" required></label>                  
+                  </div>                  
+                </div>
+                <div class="row">
+                  <div class="col-3 offset-1">
+                    <p>Hora:</p>
+                  </div>                  
+                  <div class="col-3">                  
+                    <label for="validationDefault02" class="form-label"><input type="time" class="form-control" id="validationDefault02" required></label>                 
+                  </div>
+                </div>
+                <div class="col-3 offset-1">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                      <label class="form-check-label" for="invalidCheck2">
+                        acepto los términos y condiciones 
+                      </label>
+                    </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Reservar Mesa</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>      
+      </section>
+
       <!--Header-->
       <header class="header p-5">
         <div class="container-fluid py-7">
@@ -179,15 +261,15 @@
             </div>
             <!--boton para reservar mesa-->
             <div class="col-12 col-sm-3 align-self-center">
-              <a href="#" data-bs-toggle="modal" data-bs-target="#reservarModal" title="Click para reservar mesa"><button type="button" class="btn btn-warning">Reservar Mesa</button></a><!--data-bs-toggle="mensaje" para mensaje corto en el boton, con data-bs-target="#reservarModal" se llama el id del modal mas el mensaje title= -->
+              <a href="#" data-bs-toggle="modal" data-bs-target="#reservarModal" title="Click para reservar mesa"><button id="reservarBoton" type="button" class="btn btn-warning btn-lg">Reserve su Mesa</button></a><!--data-bs-toggle="mensaje" para mensaje corto en el boton, con data-bs-target="#reservarModal" se llama el id del modal mas el mensaje title= -->
             </div>            
           </div>
         </div>
       </header>
-      <!--Seccion Comida-->
+
+      <!--Implementacion Carousel bootstrap-->
       <section>
-        <br><br>
-        <!--Implementacion Carousel bootstrap-->
+        <br><br>        
         <div class="container">
           <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -225,11 +307,33 @@
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
-            </button>
+            </button>            
+              <button class="btn btn-danger btn-sm" id="carouselButton">
+                <span class="bi bi-pause-fill"></span>
+              </button>              
           </div>  
         </div>
+      </section>
         
-        <div class="container">   
+      <!--Seccion Comida--> 
+      <section>
+        <div class="container">
+          <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 order-sm-first col-md-3">
+              <h3>Promoción del día</h3>
+            </div>
+            <div class="col col-sm order-sm-last col-md">
+              <div class="d-flex">                
+                <div class="flex-grow-1 ms-3">
+                  <h2>Paella de la casa <span class="badge text-bg-danger">Promoción</span></h2>
+                  <p class="d-none d-sm-block">Combinación apetitosa con con ensalada rusa, seis tentadores aperitivos,  y famoso postres 3 leches Marleny. Burbujas y jugo natural gratis. Todo por sólo $29.000 por persona.</p>
+                </div>
+                <div class="flex-shrink-0 img-thumbnail">
+                  <img src="./images/arroz_pollo.png" height="160" width="150" alt="...">
+                </div>
+              </div>
+            </div>
+          </div>   
           <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
               <h3>Nuestras deliciosas creaciones culinarias</h3>
@@ -280,7 +384,8 @@
                 </div>
               </div>
             </div>
-          </div>         
+          </div> 
+        </div>         
       </section>
 
       <!--footer-->
@@ -303,36 +408,42 @@
                 Barrio Cabecera V etapa<br>
                 Bucaramanga, Santander<br>
                 <i class="bi bi-telephone-forward-fill"></i> tel: +57 322 806 2627<br>
-                <i class="bi bi-whatsapp"></i> whatsapp: +57 322 806 2627<br>
-                <i class="bi bi-envelope-at-fill"></i> email: <a href="mailto:greyes8408@gmail.com">Correo</a>
+                <i class="bi bi-whatsapp"></i> Whatsapp: +57 322 806 2627<br>
+                <i class="bi bi-telegram"></i> Telegram: +57 322 806 2627
               </address>
-            </div>
+            </div>  
             <div class="col-12 col-sm-4 align-self-center">              
               <div class="text-center">
-              <a href="https://www.facebook.com/"><img width="48" height="48" src="https://img.icons8.com/color/48/facebook-new.png" alt="facebook-new"/></a>
-              <a href="https://www.instagram.com/"><img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"/></a>
-              <a href="https://www.twitter.com/"><img width="48" height="48" src="https://img.icons8.com/color/48/twitter--v1.png" alt="twitter--v1"/></a>
-              <a href="https://www.youtube.com/"><img width="48" height="48" src="https://img.icons8.com/fluency/48/youtube-play.png" alt="youtube-play"/></a>
-              <a href="https://www.linkedin.com/"><img width="48" height="48" src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin"/></a>
-              <a href="mailto"><img width="48" height="48" src="https://img.icons8.com/fluency/48/gmail.png" alt="gmail"/></a>
+                <a href="https://api.whatsapp.com/send/?phone=573228062627&text=Hola,%20soy%20Gregory%20gracias%20por%20contactarme%20te%20escribiré%20lo%20mas%20pronto%20posible." target="_blank" rel="noopener noreferrer"><img width="50" height="50" src="https://img.icons8.com/color/50/whatsapp--v1.png" alt="whatsapp--v1"/></a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img width="48" height="48" src="https://img.icons8.com/color/48/facebook-new.png" alt="facebook-new"/></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"/></a>
+                <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"><img width="48" height="48" src="https://img.icons8.com/color/48/twitter--v1.png" alt="twitter--v1"/></a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img width="48" height="48" src="https://img.icons8.com/fluency/48/youtube-play.png" alt="youtube-play"/></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><img width="48" height="48" src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin"/></a>
+                <a href="https://t.me/+573228062627" target="_blank" rel="noopener noreferrer"><img width="48" height="48" src="https://img.icons8.com/color/50/telegram-app--v1.png" alt="telegram-app--v1"/></a>
               </div>              
             </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-auto">
-            <p>© Copyright 2023 Desarrollo e innovación</p>
+            <p class="texto-footer">© Copyright 2023 Desarrollo e innovación</p> <!-- opcionalmente se puede utilizar para el copyright &#169;-->
           </div>
         </div>
       </footer>
-      <!--script de bootstrap-->      
+
+      <!--script de bootstrap--> 
+      <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script> <!--jquery para el funcionamiento de bootstrap-->     
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>      
+      <script src="Js/scripts.js"></script>
+      <!--script para los tooltip para el color del mensaje 
       <script>
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="mensaje"]'))
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
           return new bootstrap.Tooltip(tooltipTriggerEl)
         })
       </script>
+      -->      
   </body>
 </html>
 
