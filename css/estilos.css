@@ -82,3 +82,55 @@ body{
     color: #626060;
     font-size: 15px;
 }
+
+/******************SECCION PREMIOS************************/
+
+@media (min-width: 576px) {
+    .seccion-features {
+      padding-bottom: 100px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .col-md-5 {
+      flex: 0 0 auto;
+      width: 42%;
+    }
+  }
+  
+  .bloque-encabezado {
+    padding-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .seccion-features .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+  }
+  
+  .justify-content-center {
+    justify-content: center!important;    
+  }
+  
+  .feature-box{
+    position: relative;
+    padding: 15px 20px 15px 70px;  
+  }
+  
+  
+  .feature-box .icon {
+    font-size: 30px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 30px;
+    text-align: center;
+    color: #3b99e0;
+  }
+  
