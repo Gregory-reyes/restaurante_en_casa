@@ -83,6 +83,10 @@ body{
     font-size: 15px;
 }
 
+.navbar-brand{
+  padding-left: 4px;
+}
+
 /******************SECCION PREMIOS************************/
 
 @media (min-width: 576px) {

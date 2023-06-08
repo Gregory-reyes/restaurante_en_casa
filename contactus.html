@@ -285,11 +285,11 @@
                   <hr>
                 </div>
             </div>
-            <div class="row row-content">
+            <div class="row">
               <div class="col-12">
                   <h3>Información sobre la ubicación</h3>
-              </div>
-                <div class="col-12 col-sm-4 offset-sm-1">
+              </div>              
+                <div class="col-12 col-sm-4 offset-sm-1 align-self-center">
                       <h5>Nuestra dirección</h5>
                         <address style="font-size: 100%">
                           calle 48b n° 60 - 32, Cabecera V etapa<br>
@@ -298,50 +298,76 @@
                           <i class="bi bi-telephone-forward-fill"></i>: +57 322 806 2627<br>
                           <i class="bi bi-whatsapp"></i>: +57 322 806 2627<br>
                           <i class="bi bi-envelope-at-fill"></i>:
-                                <a href="mailto:confusion@food.net">Correo</a>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=greyes8408@gmail.com" target="_blank" rel="noopener noreferrer">Correo Gmail</a>
                         </address>
                 </div>
                 <div class="col-12 col-sm-6 offset-sm-1">
-                    <h5>Mapa de nuestra ubicación</h5>
-                </div>
+                  <h5>Mapa de nuestra ubicación</h5>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.2267802586393!2d-73.10989182529505!3d7.099693892903564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683f9501983051%3A0x816d5ea64809e1b0!2sCacique%20El%20Centro%20Comercial!5e0!3m2!1ses!2sco!4v1686249632049!5m2!1ses!2sco" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>                
                 <div class="col-12 col-sm-11 offset-sm-1">
                   <div class="btn-group" role="group" aria-label="Basic example">
-                    <a href="https://api.whatsapp.com/send/?phone=573228062627&text=Hola,%20soy%20Gregory%20gracias%20por%20contactarme%20te%20escribiré%20lo%20mas%20pronto%20posible." target="_blank" rel="noopener noreferrer">
-                    <button type="button" class="btn btn-success"><i class="bi bi-whatsapp"></i> whatsapp</button>
-                    </a>
-                    <a href="https://t.me/+573228062627" target="_blank" rel="noopener noreferrer">
-                    <button type="button" class="btn btn-primary"><i class="bi bi-telegram"></i> Telegram</button>
-                    </a>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                    <button type="button" class="btn btn-danger"><i class="bi bi-instagram"></i> instagram</button>
-                    </a>
+                    <span class="navbar-brand">
+                      <a href="https://api.whatsapp.com/send/?phone=573228062627&text=Hola,%20soy%20Gregory%20gracias%20por%20contactarme%20te%20escribiré%20lo%20mas%20pronto%20posible." target="_blank" rel="noopener noreferrer">
+                        <button type="button" class="btn btn-success btn-sm"><i class="bi bi-whatsapp"></i> whatsapp</button>
+                        </a>
+                    </span>
+                    <span class="navbar-brand">
+                      <a href="https://t.me/+573228062627" target="_blank" rel="noopener noreferrer">
+                        <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-telegram"></i> Telegram</button>
+                        </a>
+                    </span>
+                    <span class="navbar-brand">  
+                      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <button type="button" class="btn btn-danger btn-sm"><i class="bi bi-instagram"></i> instagram</button>
+                        </a>
+                    </span>                    
                   </div>
                 </div>
             </div>
+            
           <!--Enviandonos sus comentarios-->      
             <div class="row row-content">
               <div class="col-12">
-                  <h3>Califíquenos enviándonos sus comentarios</h3>
+                  <h3>Califique nuestros servicios</h3>
               </div>
                 <div class="col-12 col-md-6">                  
                   <form>
-                    <div class="row mb-3">
-                      <label for="seleccion1" class="col-sm-2 col-form-label"> <b>Servicio: </b></label>
-                      <select class="form-select" aria-label="select example">
-                        <option selected disabled>Seleccione una de la opciones</option>
-                        <option value="1">Valoración del platillo</option>
-                        <option value="2">Servicio y atención al cliente</option>
-                        <option value="3">Entrega del producto</option>
-                      </select>
+                    <div class="row">
+                      <div class="col-2">
+                        <label for="seleccion1" class="col-sm-2 col-form-label"> <b>Orden:</b></label>
+                      </div>
+                      <div class="col-7"> 
+                        <input type="input" class="form-control form-control-sm mr-1" id="N_orden" placeholder="Ingrese el numero de la orden" required>
+                      </div> 
+                      <div class="col-3">
+                      </div>                     
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-2">
+                        <label for="seleccion1" class="col-sm-2 col-form-label"> <b>Servicio:</b></label>
+                      </div>
+                      <div class="col-10">
+                        <select class="form-select" aria-label="select example" required>
+                          <option selected disabled>Seleccione una de la opciones</option>
+                          <option value="1">Valoración del platillo</option>
+                          <option value="2">Servicio y atención al cliente</option>
+                          <option value="3">Entrega del producto</option>
+                        </select>
+                      </div>                      
                     </div>
                     <div class="row mb-3">
-                      <label for="seleccion2" class="col-sm-2 col-form-label"> <b>Sucursal:</b> </label>
-                      <select class="form-select" aria-label="select example">
-                        <option selected disabled>Seleccione una de la opciones</option>
-                        <option value="1">Bucaramanga</option>
-                        <option value="2">Cabecera</option>
-                        <option value="3">Cañaveral</option>
-                      </select>
+                      <div class="col-2">
+                        <label for="seleccion2" class="col-sm-2 col-form-label"> <b>Sucursal:</b> </label>
+                      </div>
+                      <div class="col-10">
+                        <select class="form-select" aria-label="select example">
+                          <option selected disabled>Seleccione una de la opciones</option>
+                          <option value="1">Bucaramanga</option>
+                          <option value="2">Cabecera</option>
+                          <option value="3">Cañaveral</option>
+                        </select>
+                      </div>                      
                     </div>
                     <fieldset class="row mb-3">                      
                       <legend class="col-form-label col-sm-2 pt-0"> <b>Califícame:</b></legend>                    
@@ -372,7 +398,7 @@
                         </div>
                       </div>
                     </fieldset>                    
-                    <button type="submit" class="btn btn-primary">Enviar <i class="bi bi-send"></i></button>
+                    <button type="submit" class="btn btn-primary">Califique <i class="bi bi-send"></i></button>
                   </form>
                     
                 </div>
