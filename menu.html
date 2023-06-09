@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <!--Metadatos-->
+      <meta charset="UTF-8">
+      <meta name="autor" content="Restaurante Marleny">
+      <meta name="description" content=" Desarrollo de Restaurante Marleny">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--Titulo pagina-->
+      <title>Restaurante Marleny</title>
+      <!--Bootstrap 5.2.3-->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+      <!--Iconos de bootstrap-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+      <!-- styles css-->
+      <link rel="stylesheet" href="css/estilos.css"> 
+      <!--Favicon-->
+      <link class="image-favicon" rel="icon" type="image/x-icon" href="images/icons8-chef-256.png">      
+  </head>
+  <body>
+      <!--Barra de navegacion nav de bootstrap-->
+      <nav class="navbar navbar-dark navbar-expand-sm fixed-top"> <!--fixed-top fijar el nav bg-primary= color-->
+        <div class="container-fluid">
+          <img src="./images/icons8-chef-256.png" height="40" width="40" class="img-fluid" alt="...">
+          <a class="navbar-brand" href="#">Restaurante Marleny</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <!--data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" permite que el boton se despliegue y los valores quene en un cuadro-->
+            <span class="navbar-toggler-icon"></span> <!--navbar-toggler-icon icono del boton-->
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!--collapse navbar-collapse permite que el boton se despliegue y los valores queden en un cuadro-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="./index.html"><i class="bi bi-house-heart-fill"></i> Inicio</a></li><!--nav-link active permite que no quede sombreado-->
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="./aboutus.html"><i class="bi bi-people-fill"></i> Acerca de nosotros</a></li>
+              <li class="nav-item"><a class="nav-link  active" aria-current="page" href="#"><i class="bi bi-menu-button-fill"></i> Menu</a></li>
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="./contactus.html"><i class="bi bi-person-fill-add"></i> Contáctanos</a></li>                   
+            </ul>
+            <!--Botones para iniciar sesion y registro-->
+            <div>
+              <span class="navbar-text">            
+                <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" class="btn btn-outline-success" title="Click para iniciar sesión"><i class="bi bi-box-arrow-in-right"></i> Iniciar Sesión</a> <!--data-bs-target="#loginModal" es nuestro id para llamar el modal; class="btn btn-outline-success" es para dar color verde y recuadro verde al login -->           
+              </span>
+              <span class="navbar-text">            
+                <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" class="btn btn-outline-primary" title="Click registrarse"><i class="bi bi-person-vcard"></i> Registrarse</a> <!--data-bs-target="#loginModal" es nuestro id para llamar el modal; class="btn btn-outline-success" es para dar color verde y recuadro verde al login -->           
+              </span>
+            </div>            
+          </div>          
+        </div>
+      </nav>
+
+      <!--seccion modales pagina-->
+      <section>
+        <!--Modal para iniciar sesion-->
+        <div class="modal fade" id="loginModal" tabindex="-1"> <!--modal fade para que el modal se despliegue  suave en la pagina y llamamos el id=-->
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header bg-success text-white">
+                <h5 class="modal-title">Ingrese Usuario y Contraseña</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid"> <!--container-fluid para que el contenido del modal se ajuste-->
+                  <div class="row">
+                    <div class="col-3 offset-1">
+                      <label class="sr-only" for="usuario"><p>Usuario:</p></label>
+                    </div>
+                    <div class="col-7">
+                      <input type="input" class="form-control form-control-sm mr-1" id="usuario" placeholder="Ingrese Usuario" required>
+                    </div>                  
+                  </div>
+                  <div class="row">
+                    <div class="col-3 offset-1">
+                      <label class="sr-only" for="exampleInputPassword3"><p> Contraseña:</p></label>
+                    </div>
+                    <div class="col-7">
+                      <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Contraseña" required>
+                    </div>                  
+                  </div>
+                  <div class="col-3 offset-1">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label"> Recuerdeme
+                        </label>
+                    </div>
+                  </div>
+                </div>              
+              </div>            
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-success">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Modal para Registrarse-->
+        <div class="modal fade" id="registerModal" tabindex="-1"> <!--modal fade para que el modal se despliegue  suave en la pagina y llamamos el id=-->
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Formulario registro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid"> <!--container-fluid para que el contenido del modal se ajuste-->
+                  <div class="row">
+                    <div class="col-3 offset-1">
+                      <label class="sr-only" for="nombres"><p>Nombres:</p></label>
+                    </div>
+                    <div class="col-7">
+                      <input type="text" class="form-control form-control-sm mr-1" id="nombresR" placeholder="Ingrese nombres" required>
+                    </div>                  
+                  </div>
+                  <div class="row">
+                    <div class="col-3 offset-1">
+                      <label class="sr-only" for="apellidos"><p>Apellidos:</p></label>
+                    </div>
+                    <div class="col-7">
+                      <input type="text" class="form-control form-control-sm mr-1" id="apellidosR" placeholder="Ingrese apellidos" required>
+                    </div>                  
+                  </div>
+                  <div class="row">
+                    <div class="col-3 offset-1">
+                      <label class="sr-only" for="celular"><p>Celular:</p></label>
+                    </div>
+                    <div class="col-7">
+                      <input type="text" class="form-control form-control-sm mr-1" id="celular" placeholder="N° de Celular" required>
+                    </div>                  
+                  </div>
+                  <div class="row">
+                    <div class="col-3 offset-1">
+                      <label class="sr-only" for="correo"><p>Correo:</p></label>
+                    </div>
+                    <div class="col-7">
+                      <input type="email" class="form-control form-control-sm mr-1" id="correo" placeholder="Correo Electrónico" required>
+                    </div>                  
+                  </div>
+                  <div class="row">
+                    <div class="col-3 offset-1">
+                      <label class="sr-only" for="contraseña1"><p>Contraseña:</p></label>
+                    </div>
+                    <div class="col-7">
+                      <input type="password" class="form-control form-control-sm mr-1" id="contraseña1" placeholder="Contraseña" required>
+                    </div>                  
+                  </div>
+                  <div class="row">
+                    <div class="col-3 offset-1">
+                      <label class="sr-only" for="contraseña2"><p>Confirmar contraseña:</p></label>
+                    </div>
+                    <div class="col-7">
+                      <input type="password" class="form-control form-control-sm mr-1" id="contraseña2" placeholder="Confirmar Contraseña" required>
+                    </div>                  
+                  </div>                
+                </div>              
+              </div>            
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Registrarme</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Modal para reservar mesa-->
+        <div class="modal" id="reservarModal" tabindex="-1">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header bg-warning text-white">
+                <h5 class="modal-title">Reservar Mesa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-3 offset-1">
+                    <label class="col text-center"><p>N° Comensales:</p></label>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                      <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                      <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                      <label class="form-check-label" for="inlineRadio3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                      <label class="form-check-label" for="inlineRadio4">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                      <label class="form-check-label" for="inlineRadio5">5</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                      <label class="form-check-label" for="inlineRadio6">6</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="option7">
+                      <label class="form-check-label" for="inlineRadio7">7</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3 offset-1">
+                    <label class="col text-center"><p>Tipo del menu:</p> </label>
+                  </div>
+                  <div class="col">
+                    <label class="btn btn-secondary">
+                      <input type="radio" name="options" id="continental"> Continental
+                  </label>
+                    <label class="btn btn-primary">
+                      <input type="radio" name="options" id="especialidad"> Esp. del chef
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3 offset-1">
+                    <p>Fecha:</p>
+                  </div>
+                  <div class="col-3">
+                    <label for="validationDefault01" class="form-label"><input type="date" class="form-control" id="validationDefault01" required></label>                  
+                  </div>                  
+                </div>
+                <div class="row">
+                  <div class="col-3 offset-1">
+                    <p>Hora:</p>
+                  </div>                  
+                  <div class="col-3">                  
+                    <label for="validationDefault02" class="form-label"><input type="time" class="form-control" id="validationDefault02" required></label>                 
+                  </div>
+                </div>
+                <div class="col-3 offset-1">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                      <label class="form-check-label" for="invalidCheck2">
+                        acepto los términos y condiciones 
+                      </label>
+                    </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Reservar Mesa</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Header-->
+      <header class="header p-5">
+        <div class="container-fluid py-7">
+          <div class="row row-header">
+            <div class="col-12 col-sm-6">
+              <div class="col">
+                <h1>Restaurante Marleny</h1>
+              <p>Nos inspiramos en las mejores cocinas del mundo para crear una experiencia de fusión única. Nuestras deliciosas creaciones deleitarán sus sentidos culinarios.</p>
+              </div>              
+            </div>
+            <!--Response images bootstrap para el logo-->
+            <div class="col-12 col-sm-3 align-self-center">
+              <img src="./images/icons8-chef-256.png" height="110" width="120" class="img-fluid" alt="...">
+            </div>
+            <!--boton para reservar mesa-->
+            <div class="col-12 col-sm-3 align-self-center">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#reservarModal" title="Click para reservar mesa"><button id="reservarBoton" type="button" class="btn btn-warning btn-lg">Reserve su Mesa</button></a><!--data-bs-toggle="mensaje" para mensaje corto en el boton, con data-bs-target="#reservarModal" se llama el id del modal mas el mensaje title= -->
+            </div>            
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <!--Migas de pan-->
+        <div class="row">
+          <!--breadcrumb del ol para hacer un seguimiento de la pagina "miga de pan"-->
+          <ol class="col-12 breadcrumb">
+            <li class="breadcrumb-item"><a href="./index.html">Inicio</a></li>
+            <li class="breadcrumb-item active">Menú</li>
+          </ol>
+          <div class="col-12">
+            <h3>Menú</h3>
+            <hr>
+          </div>
+        </div>
+      </div>
+
+      <!--Implementacion Carousel bootstrap-->
+      <section>
+        <br><br>        
+        <div class="container">
+          <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="./images/uthappizza.png" class="d-block img-fluid" alt="..."> <!--class="d-block img-fluid" ajuste al carrusel a la imagen fluida-->
+                <div class="carousel-caption d-none d-md-block">
+                  <h2 class="text-white">Pizza Familiar <span class="badge text-bg-danger">Hot</span> <span class="badge rounded-pill text-bg-secondary">$59.000</span></h2>
+                  <p class="d-none d-sm-block text-white">Una combinación única de la pizza italiana, cubierta con aceitunas Cerignola, tomates cherry maduros en rama, cebolla Vidalia, guindillas Guntur y Buffalo Paneer.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="./images/buffet.png" class="d-block img-fluid" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h2 class="text-white">Fin de semana Gran Buffet <span class="badge text-bg-danger">Promoción</span></h2>
+                  <p class="d-none d-sm-block text-white">Combinaciones apetitosas con cinco ensaladas diferentes, seis tentadores aperitivos, seis platos principales y cinco postres. Burbujas y jugo natural gratis. Todo por sólo $29.000 por persona.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./images/sancocho.png" width="110" height="110" class="d-block img-fluid" alt="..."> <!--width="110" height="110" ajuste manual de la imagen-->
+                <div class="carousel-caption d-none d-md-block">
+                  <h2 class="text-white">Marlene Pico <span class="badge text-bg-danger">Chef profesional</span></h2>
+                  <p class="d-none d-sm-block text-white">Amplia experiencia internacional, trabajando en estrecha colaboración con la élite del mundo culinario y está especializada en la creación de deliciosas experiencias de fusión indo-italiana.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>            
+              <button class="btn btn-danger btn-sm" id="carouselButton">
+                <span class="bi bi-pause-fill"></span>
+              </button>              
+          </div>  
+        </div>
+      </section>
+        
+      <!--Seccion Comida--> 
+      <section>
+        <div class="container">
+          <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 order-sm-first col-md-3">
+              <h3>Promoción del día</h3>
+            </div>
+            <div class="col col-sm order-sm-last col-md">
+              <div class="d-flex">                
+                <div class="flex-grow-1 ms-3">
+                  <h2>Paella de la casa <span class="badge text-bg-danger">Promoción</span></h2>
+                  <p class="d-none d-sm-block">Combinación apetitosa con con ensalada rusa, seis tentadores aperitivos,  y famoso postres 3 leches Marleny. Burbujas y jugo natural gratis. Todo por sólo $29.000 por persona.</p>
+                </div>
+                <div class="flex-shrink-0 img-thumbnail">
+                  <img src="./images/arroz_pollo.png" height="160" width="150" alt="...">
+                </div>
+              </div>
+            </div>
+          </div>   
+          <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 order-sm-last col-md-3">
+              <h3>Nuestras deliciosas creaciones culinarias</h3>
+            </div>          
+            <div class="col col-sm order-sm-first col-md">
+              <!--implementacion Media object bootstrap-->
+              <div class="d-flex">
+                <div class="flex-shrink-0 img-thumbnail"> <!--img-thumbnail para que la imagen tenga bordes redondeados-->
+                  <img src="./images/uthappizza.png" alt="PizzaMarleny">
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <!--implementacion badge bootstrap-->
+                  <h2>Pizza Familiar <span class="badge text-bg-danger">Hot</span> <span class="badge rounded-pill text-bg-secondary">$59.000</span></h2>
+                  <p class="d-none d-sm-block">Una combinación única de la pizza italiana, cubierta con aceitunas Cerignola, tomates cherry maduros en rama, cebolla Vidalia, guindillas Guntur y Buffalo Paneer.</p>
+                </div>
+              </div>              
+            </div>
+          </div>
+          <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 order-sm-first col-md-3">
+              <h3>Promociones de este mes</h3>
+            </div>
+            <div class="col col-sm order-sm-last col-md">
+              <div class="d-flex">                
+                <div class="flex-grow-1 ms-3">
+                  <h2>Fin de semana Gran Buffet <span class="badge text-bg-danger">Promoción</span></h2>
+                  <p class="d-none d-sm-block">Combinaciones apetitosas con cinco ensaladas diferentes, seis tentadores aperitivos, seis platos principales y cinco postres. Burbujas y jugo natural gratis. Todo por sólo $29.000 por persona.</p>
+                </div>
+                <div class="flex-shrink-0 img-thumbnail">
+                  <img src="./images/buffet.png" height="160" width="150" alt="...">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 order-sm-last col-md-3">
+              <h2>Chef de platos de preparación tradicionales</h2>
+            </div>
+            <div class="col col-sm order-sm-first col-md">
+              <div class="d-flex">
+                <div class="flex-shrink-0">
+                  <img src="./images/icons8-chef-256.png" height="160" width="150" alt="...">
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h2>Marlene Pico</h2>
+                  <h4>Chef profesional</h4>
+                  <p class="d-none d-sm-block">Galardonada con cuatro estrellas Michelin y una amplia experiencia internacional, ha trabajado en estrecha colaboración con la élite del mundo culinario y está especializada en la creación de deliciosas experiencias de fusión indo-italiana.</p>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>         
+      </section>
+
+      <!--footer-->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-4 offset-1 col-md-2">
+              <h5>links</h5>
+              <ul class="list-unstyled">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./aboutus.html">Acerca de nosotros</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="./contactus.html">Contactame</a></li>
+              </ul>
+            </div>
+            <div class="col-7 col-sm-5">
+              <h5>Dirección y Redes sociales</h5>
+              <address>
+                Calle 48b n° 60 - 32<br>
+                Barrio Cabecera V etapa<br>
+                Bucaramanga, Santander<br>
+                <i class="bi bi-telephone-forward-fill"></i> tel: +57 322 806 2627<br>
+                <i class="bi bi-whatsapp"></i> Whatsapp: +57 322 806 2627<br>
+                <i class="bi bi-telegram"></i> Telegram: +57 322 806 2627
+              </address>
+            </div>  
+            <div class="col-12 col-sm-4 align-self-center">              
+              <div class="text-center">
+                <a href="https://api.whatsapp.com/send/?phone=573228062627&text=Hola,%20soy%20Gregory%20gracias%20por%20contactarme%20te%20escribiré%20lo%20mas%20pronto%20posible." target="_blank" rel="noopener noreferrer"><img width="50" height="50" src="https://img.icons8.com/color/50/whatsapp--v1.png" alt="whatsapp--v1"/></a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img width="48" height="48" src="https://img.icons8.com/color/48/facebook-new.png" alt="facebook-new"/></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"/></a>
+                <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"><img width="48" height="48" src="https://img.icons8.com/color/48/twitter--v1.png" alt="twitter--v1"/></a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img width="48" height="48" src="https://img.icons8.com/fluency/48/youtube-play.png" alt="youtube-play"/></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><img width="48" height="48" src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin"/></a>
+                <a href="https://t.me/+573228062627" target="_blank" rel="noopener noreferrer"><img width="48" height="48" src="https://img.icons8.com/color/50/telegram-app--v1.png" alt="telegram-app--v1"/></a>
+              </div>              
+            </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <p class="texto-footer">© Copyright 2023 Desarrollo e innovación</p> <!-- opcionalmente se puede utilizar para el copyright &#169;-->
+          </div>
+        </div>
+      </footer>
+
+      <!--script de bootstrap--> 
+      <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script> <!--jquery para el funcionamiento de bootstrap-->     
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>      
+      <script src="Js/scripts.js"></script>
+      <!--script para los tooltip para el color del mensaje 
+      <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="mensaje"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+      </script>
+      -->      
+  </body>
+</html>
+
