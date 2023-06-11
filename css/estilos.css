@@ -137,4 +137,80 @@ body{
     text-align: center;
     color: #3b99e0;
   }
+  /**************************SECCION MENU************************/
+
+  .galeria{
+    display: flex;
+    left: calc(50% - 330px);
+  }
   
+  .card1{
+    margin: 10px;
+    border: 1px solid #ccc;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+
+  .card2{
+    position: relative;
+    left: 0;
+    width: 210px;
+    height: 160px;
+    padding: 8px;
+    background-color: white;
+    border-radius: 8px;
+    transition: 0.6s ease-in-out;
+    box-shadow: rgba(0,0,0,0.25) 0px 5px 25px;
+    border: 1px solid rgba(0,0,0,0.25);
+  }
+
+  .card2:nth-child(1){
+    background-color: #f05e5e;
+   
+  }
+  .card2:nth-child(2){
+    background-color: #1c2883;
+    
+  }
+  .card2:nth-child(3){
+    background-color: #96ad24;
+    
+  }
+  .card2:nth-child(4){
+    background-color: #f93d0e;
+    
+  }
+  .card2:nth-child(5){
+    background-color: #f1f1f1;
+    
+  }
+  .card2:nth-child(6){
+    background-color: #a6a1a1;
+    
+  }
+  .card2:nth-child(7){
+    background-color: #ae26ae;
+    
+  }
+
+  .card2:not(:first-child){
+    margin-left: -25px;
+  }
+
+  .card2:hover{
+    transform: translateY(-20px);
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .card2:hover ~ .card2{
+    transform: translateX(25px);
+  }
+ 
+  /*
+  .card2:hover ~ .card2{
+    left: 20px;
+  }*/
