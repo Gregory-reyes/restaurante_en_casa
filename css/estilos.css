@@ -87,6 +87,9 @@ body{
   padding-left: 4px;
 }
 
+.card-header{
+  margin: auto;
+}
 /******************SECCION PREMIOS************************/
 
 @media (min-width: 576px) {
@@ -137,20 +140,15 @@ body{
     text-align: center;
     color: #3b99e0;
   }
-  /**************************SECCION MENU************************/
+  /**************************SECCION MENU************************/ 
 
   .galeria{
     display: flex;
     left: calc(100% - 330px);
   }
-
-  .galeria2{
-    display: flex;
-    left: calc(50% - 330px);
-  }
   
   .card{
-    margin: 20px;
+    margin: auto;
     border: 1px solid #ccc;
     width: 300px;
     height: 300px;
@@ -159,23 +157,13 @@ body{
     border-radius: 5px;
     
   }
-
-  .card1{
-    margin: 20px;
-    border: 1px solid #ccc;
-    width: 300px;
-    height: 300px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px;
-  }
-
+  
   .card2{
     margin: 20px;
     position: relative;
     left: 0;
-    width: 210px;
-    height: 160px;
+    width: 320px;
+    height: 300px;
     padding: 8px;
     background-color: white;
     border-radius: 8px;
@@ -200,31 +188,19 @@ body{
     background-color: #f93d0e;
     
   }
-  .card2:nth-child(5){
-    background-color: #f1f1f1;
     
-  }
-  .card2:nth-child(6){
-    background-color: #a6a1a1;
-    
-  }
-  .card2:nth-child(7){
-    background-color: #ae26ae;
-    
-  }
-
   .card2:not(:first-child){
-    margin-left: -25px;
+    margin-left: -85px;
   }
 
   .card2:hover{
     transform: translateY(-20px);
-    font-weight: bold;
+    font-weight: lighter;
     cursor: pointer;
   }
   
   .card2:hover ~ .card2{
-    transform: translateX(25px);
+    transform: translateX(65px);
   }
  
   /*
