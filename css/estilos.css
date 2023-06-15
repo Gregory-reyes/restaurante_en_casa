@@ -60,7 +60,6 @@ body{
     left: 0;
     min-height: 300px;
     min-width: 300px;
-    background-color: rgb(250, 245, 235);
 }
 
 .carousel-caption{
@@ -165,6 +164,7 @@ body{
     width: 320px;
     height: 300px;
     padding: 8px;
+    color: floralwhite;
     background-color: white;
     border-radius: 8px;
     transition: 0.6s ease-in-out;
@@ -195,7 +195,7 @@ body{
 
   .card2:hover{
     transform: translateY(-20px);
-    font-weight: lighter;
+    font-weight: 7;
     cursor: pointer;
   }
   
