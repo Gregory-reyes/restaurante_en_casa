@@ -168,7 +168,7 @@ body{
     position: relative;
     left: 0;
     width: 320px;
-    height: 300px;
+    height: 345px;
     padding: 8px;
     background-color: #B890FC;
     border-radius: 8px;
@@ -176,22 +176,21 @@ body{
     box-shadow: rgba(0,0,0,0.25) 0px 5px 25px;
     border: 1px solid rgba(0,0,0,0.25);
   }
+  
+  .card2:nth-child(1):hover{    
+    background-color: rgb(34 211 238);   
+  }
 
-  .card2:nth-child(1){
-    background-color: #B890FC;
-   
+  .card2:nth-child(2):hover{
+    background-color: rgb(203 213 225);    
   }
-  .card2:nth-child(2){
-    background-color: #B890FC;
-    
+
+  .card2:nth-child(3):hover{
+    background-color: rgb(249 168 212);    
   }
-  .card4:nth-child(3){
-    background-color: #96ad24;
-    
-  }
-  .card5:nth-child(4){
-    background-color: #f93d0e;
-    
+  
+  .card2:nth-child(4):hover{    
+    background-color: rgb(56 189 248);    
   }
     
   .card2:not(:first-child){
