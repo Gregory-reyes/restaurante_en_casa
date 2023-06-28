@@ -69,7 +69,7 @@ body{
 #carouselButton {
     position: absolute;
     bottom: 250px;/*si el coloco '0' lo posiciona en la parte inferior del carousel y si le colo 250 el laparte superior del tamaño del carousel*/
-    right: 0px;
+    right: 914px; /*Ajuste a la izquierda del boton pausa en el carousel*/
 }
 
 #reservarBoton{    
