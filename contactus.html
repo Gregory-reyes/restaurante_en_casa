@@ -337,17 +337,17 @@
                         <label for="seleccion1" class="col-sm-2 col-form-label"> <b>Orden:</b></label>
                       </div>
                       <div class="col-7"> 
-                        <input type="input" class="form-control form-control-sm mr-1" name="N_orden" placeholder="Ingrese número de la orden" required>
+                        <input type="input" class="form-control form-control-sm mr-1" name="N_orden" id="seleccion1" placeholder="Ingrese número de la orden" required>
                       </div> 
                       <div class="col-3">
                       </div>                     
                     </div>
                     <div class="row mb-2">
                       <div class="col-2">
-                        <label for="seleccion1" class="col-sm-2 col-form-label"> <b>Servicio:</b></label>
+                        <label for="seleccion2" class="col-sm-2 col-form-label"> <b>Servicio:</b></label>
                       </div>
                       <div class="col-10">
-                        <select class="form-select" name="servicio" aria-label="select example" required>
+                        <select class="form-select" name="servicio" id="seleccion2" aria-label="select example" required>
                           <option selected disabled>Seleccione una de la opciones</option>
                           <option value="Platillo">Valoración del platillo</option>
                           <option value="Atencion">Servicio y atención al cliente</option>
@@ -355,12 +355,12 @@
                         </select>
                       </div>                      
                     </div>
-                    <div class="row mb-3">
+                    <div class="row mb-2">
                       <div class="col-2">
-                        <label for="seleccion2" class="col-sm-2 col-form-label"> <b>Sucursal:</b> </label>
+                        <label for="seleccion3" class="col-sm-2 col-form-label"> <b>Sucursal:</b> </label>
                       </div>
                       <div class="col-10">
-                        <select class="form-select" name="sucursal" aria-label="select example">
+                        <select class="form-select" name="sucursal" id="seleccion3" aria-label="select example">
                           <option selected disabled>Seleccione una de la opciones</option>
                           <option value="Bucaramanga">Bucaramanga</option>
                           <option value="Cabecera">Cabecera</option>
@@ -368,36 +368,21 @@
                         </select>
                       </div>                      
                     </div>
-                    <fieldset class="row mb-3">                      
-                      <legend class="col-form-label col-sm-2 pt-0"> <b>Califícame:</b></legend>                    
-                      <div class="col-sm-10">
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Excelente" checked>
-                          <label class="form-check-label" for="gridRadios1">
-                            Excelente
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Bueno">
-                          <label class="form-check-label" for="gridRadios2">
-                            Bueno
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Regular">
-                          <label class="form-check-label" for="gridRadios3">
-                            Regular
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="Malo">
-                          <label class="form-check-label" for="gridRadios4">
-                            Malo
-                          </label>
-                        </div>
+                    <div class="row mb-4">
+                      <div class="col-2">
+                        <label for="seleccion4" class="col-form-label col-sm-2 pt-0"><b>Califícame:</b></label>
                       </div>
-                    </fieldset>                    
-                    <button type="submit" class="btn btn-primary">Califique <i class="bi bi-send"></i></button>
+                      <div class="col-10">
+                        <select class="form-select" name="calificacion" id="seleccion4" aria-label="select example">
+                          <option selected disabled>Seleccione una de la opciones</option>
+                          <option value="Excelente">Excelente</option>
+                          <option value="Bueno">Bueno</option>
+                          <option value="Regular">Regular</option>
+                          <option value="Malo">Malo</option>
+                        </select>
+                      </div>
+                    </div>                   
+                    <button type="submit" onclick="registro()" class="btn btn-primary">Califique <i class="bi bi-send"></i></button>
                   </form>                    
                 </div>                
             </div>
